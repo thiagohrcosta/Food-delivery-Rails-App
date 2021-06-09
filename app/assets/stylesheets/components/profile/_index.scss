@@ -22,4 +22,49 @@
     color: #fff;
     opacity: 0.9;
   }
+
+}
+
+.profile-restaurant{
+  margin-right: 20px;
+}
+
+.restaurant-profile-container{
+  margin: 0 auto;
+  width: 60%;
+  padding: 20px;
+  border: 1px solid #d1d9d9;
+  display: flex;
+
+
+  .profile-restaurant-photo{
+    width: 100%;
+
+  }
+
+  .btn-edit-restaurant{
+    margin-top: 5px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #1eae98;
+    color: #fff;
+  }
+
+  .btn-edit-restaurant:hover{
+    color: #fff;
+    opacity: 0.9;
+  }
+
+  .btn-delete-restaurant{
+    margin-top: 5px;
+    width: 100%;
+    font-weight: bold;
+    background-color: #f55c47;
+    color: #fff;
+  }
+
+  .btn-delete-restaurant:hover{
+    color: #fff;
+    opacity: 0.9;
+  }
 }
