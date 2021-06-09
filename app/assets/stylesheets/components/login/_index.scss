@@ -1,0 +1,45 @@
+.login-page{
+  height: 110vh;
+  background: linear-gradient(90deg, #EEE 50%, #511281 50%);
+
+}
+
+.input-content{
+  padding: 20px;
+}
+
+.name-input{
+  display: flex;
+}
+
+.pass-input{
+  display: flex;
+}
+
+.btn-sign-up{
+  width: 100%;
+  background-color: #511281;
+  color: #fff;
+  font-weight: bold;
+}
+
+.btn-sign-up:hover{
+  color: #fff;
+  opacity: 0.9;
+}
+
+.login-content-text{
+  align-items: center;
+  padding: 200px 0 0 50px;
+
+  .login-title{
+    font-weight: bold;
+    font-size: 48px;
+    color: #fff;
+  }
+
+  .login-subtitle{
+    font-weight: lighter;
+    color: #fff;
+  }
+}

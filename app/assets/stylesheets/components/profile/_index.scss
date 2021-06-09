@@ -1,0 +1,25 @@
+.user-profile-container{
+  margin: 50px auto;
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #d1d9d9;
+
+  .user-profile-photo{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .btn-add-restaurant{
+    font-weight: bold;
+    background-color: #1eae98;
+    color: #fff;
+  }
+
+  .btn-add-restaurant:hover{
+    color: #fff;
+    opacity: 0.9;
+  }
+}
