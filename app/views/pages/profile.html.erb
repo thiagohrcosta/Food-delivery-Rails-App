@@ -1,0 +1,14 @@
+<%= render 'shared/navbar' %>
+
+<div class="container">
+  <div class="user-profile-container">
+    <img class="user-profile-photo" src="<%= current_user.photo %>" alt="">
+    <div class="">
+      <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
+      <p><%= current_user.email %></p>
+    </div>
+    <div class="">
+      <%= link_to "Add restaurant profile", "#", class: "btn btn-add-restaurant" %>
+    </div>
+  </div>
+</div>
