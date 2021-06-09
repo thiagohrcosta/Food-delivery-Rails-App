@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @restaurants = Restaurant.all
     @user = current_user.id
   end
 
