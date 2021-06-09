@@ -1,4 +1,15 @@
 <%= render 'shared/navbar' %>
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="restaurant-grid">
+    <% @restaurants.each do |restaurant| %>
+      <div class="restaurant-card">
+        <%= link_to restaurant_path(restaurant.id) do %>
+        <img class="img-restaurant" src="<%= restaurant.photo %>" alt="">
+        <p><%= restaurant.name %></p>
+        <% end %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
