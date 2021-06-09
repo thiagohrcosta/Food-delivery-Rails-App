@@ -1,5 +1,7 @@
+@import "meal";
+
 .user-profile-container{
-  margin: 50px auto;
+  margin: 50px auto 10px;
   width: 60%;
   padding: 20px;
   display: flex;
@@ -16,6 +18,18 @@
     font-weight: bold;
     background-color: #1eae98;
     color: #fff;
+  }
+
+  .btn-see-orders{
+    width: 100%;
+    font-weight: bold;
+    background-color: #511281;
+    color: #fff;
+  }
+
+  .btn-see-orders:hover{
+    color: #fff;
+    opacity: 0.9;
   }
 
   .btn-add-restaurant:hover{
@@ -68,3 +82,4 @@
     opacity: 0.9;
   }
 }
+
