@@ -8,7 +8,8 @@
       <p><%= current_user.email %></p>
     </div>
     <div class="">
-      <%= link_to "Add restaurant profile", new_restaurant_path, class: "btn btn-add-restaurant" %>
+      <%= link_to "Add restaurant profile", new_restaurant_path, class: "btn btn-add-restaurant" %><br>
+      <%= link_to "See my orders", new_restaurant_path, class: "btn btn-see-orders mt-3" %>
     </div>
   </div>
 
@@ -29,10 +30,22 @@
           <div class="meal-profile-container">
             <% @meals.each do |meal| %>
             <% if meal.restaurant_id == restaurant.id %>
-              <div class="">
-                <p><%= meal.name %></p>
-                <p><%= meal.price %></p>
-                <%= link_to "Edit meal", edit_meal_path, class: "btn" %>
+              <div class="meal-content mb-3">
+                <div class="row">
+                  <div class="col-lg-3">
+                    <img class="profile-meal-img" src="<%= meal.photo %>" alt="">
+                  </div>
+                  <div class="col-lg-3">
+                    <p><%= meal.name %></p>
+
+                  </div>
+                  <div class="col-lg-3">
+                    <p><%= meal.price %></p>
+                  </div>
+                  <div class="col-lg-3">
+                    <%= link_to "Edit meal", edit_meal_path, class: "btn btn-info" %>
+                  </div>
+                </div>
               </div>
             <% end %>
             <% end %>
