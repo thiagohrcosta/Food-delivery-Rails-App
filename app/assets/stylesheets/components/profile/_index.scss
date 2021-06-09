@@ -1,5 +1,7 @@
+@import "meal";
+
 .user-profile-container{
-  margin: 50px auto;
+  margin: 50px auto 10px;
   width: 60%;
   padding: 20px;
   display: flex;
@@ -68,3 +70,4 @@
     opacity: 0.9;
   }
 }
+

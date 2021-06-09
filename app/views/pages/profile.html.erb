@@ -19,12 +19,27 @@
         <img class="profile-restaurant-photo" src="<%= restaurant.photo %>" alt="">
         <%= link_to "edit", edit_restaurant_path(restaurant.id), class: "btn btn-edit-restaurant" %>
         <%= link_to "Delete", edit_restaurant_path(restaurant.id), class: "btn btn-delete-restaurant" %>
+        <%= link_to "Add Meal", new_meal_path, class: "btn btn-add-meal" %>
       </div>
       <div class="">
         <h2><%= restaurant.name %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel nisi imperdiet, malesuada lacus ac, fermentum dui. Curabitur risus purus, auctor a interdum ut, elementum sit amet ligula. Etiam tincidunt mauris eget leo pulvinar lobortis. Vestibulum tempus lectus in justo congue, eget vestibulum magna dignissim. Aliquam convallis hendrerit purus eu aliquet. Fusce a nibh dignissim, finibus lectus vitae.</p>
       </div>
+    </div>
+          <div class="meal-profile-container">
+            <% @meals.each do |meal| %>
+            <% if meal.restaurant_id == restaurant.id %>
+              <div class="">
+                <p><%= meal.name %></p>
+                <p><%= meal.price %></p>
+                <%= link_to "Edit meal", edit_meal_path, class: "btn" %>
+              </div>
+            <% end %>
+            <% end %>
+          </div>
+
       <% end %>
     <% end %>
-  </div>
+
+
 </div>

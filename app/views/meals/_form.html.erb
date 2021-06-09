@@ -1,0 +1,21 @@
+<%= render 'shared/navbar' %>
+
+<div class="meal-background">
+  <div class="container w-75">
+    <div class="row">
+      <div class="col-lg-6 meal-left-bg mt-5">
+
+      </div>
+      <div class="col-lg-6 meal-right-bg mt-5">
+        <%= simple_form_for (meal) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :photo %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.association :restaurant %>
+          <%= f.submit class: "btn btn-post-meal" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

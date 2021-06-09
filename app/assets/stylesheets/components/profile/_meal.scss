@@ -1,0 +1,43 @@
+.meal-background{
+  background-color: #511281;
+  height: 100vh;
+}
+
+.meal-profile-container{
+  margin: 50px auto;
+  width: 60%;
+  padding: 0 20px;
+}
+
+.btn-add-meal{
+  width: 100%;
+  margin-top: 5px;
+  background-color: #3c8dad;
+  color: #fff;
+}
+
+.btn-add-meal:hover{
+  color: #fff;
+  opacity: 0.9;
+}
+
+.meal-left-bg{
+  background-image: url("https://res.cloudinary.com/dloadb2bx/image/upload/v1623278629/photo-1414235077428-338989a2e8c0_v03y8i.jpg");
+  background-size: 100% 100%;
+}
+
+.meal-right-bg{
+  padding: 20px;
+  background-color: #d1d9d9;
+}
+
+.btn-post-meal{
+  width: 100%;
+  background-color: #511281;
+  color: #fff;
+}
+
+.btn-post-meal:hover{
+  color: #fff;
+  opacity: 0.9;
+}
