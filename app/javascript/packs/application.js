@@ -6,17 +6,17 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
+import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder';
+import 'mapbox-gl/dist/mapbox-gl.css';
+
 import "channels"
+
+import { initMapbox } from '../plugins/init_mapbox';
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
-// ----------------------------------------------------
-// Note(lewagon): ABOVE IS RAILS DEFAULT CONFIGURATION
-// WRITE YOUR OWN JS STARTING FROM HERE 👇
-// ----------------------------------------------------
 
 // External imports
 import "bootstrap";
@@ -25,6 +25,5 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-});
+  initMapbox();
+})
