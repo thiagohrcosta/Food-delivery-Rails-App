@@ -1,0 +1,38 @@
+<div class="restaurant-show"
+  style="
+    background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(<%= @restaurant.photo %>);
+    height: 90vh;
+    ">
+  <%= render 'shared/navbar' %>
+  <div class="container">
+    <div class="restaurant-header">
+      <h1 class="text-center"><%= @restaurant.name %></h1>
+      <p><%= @restaurant.description %></p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="meal-container">
+    <div class="meal-grid">
+      <% @meals.each do |meal| %>
+        <% if @restaurant.id == meal.restaurant_id %>
+          <div class="row">
+            <div class="meal-card">
+            <div class="col-lg-3 img-meal"
+              style="background-image: url(<%= meal.photo %>);
+              background-size: 100% 100%;
+            ">
+            </div>
+            <div class="col-lg-9">
+              <h3><%= meal.name %></h3>
+              <p><%= meal.description %></p>
+              <p class="meal-price">Order now for $ <%= sprintf('%.2f',meal.price) %></p>
+            </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

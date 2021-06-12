@@ -1,0 +1,33 @@
+.img-meal{
+  width: 200px;
+}
+
+.meal-container{
+  padding: 20px;
+  background-color: #fff;
+  margin-top: -100px;
+}
+.meal-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 16px;
+  margin: 10px;
+}
+
+.meal-card{
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+
+.meal-price{
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 22px;
+  background-color: #7952b3;
+}
