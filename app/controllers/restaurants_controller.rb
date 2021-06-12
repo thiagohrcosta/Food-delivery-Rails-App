@@ -2,13 +2,33 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+    @markers = @restaurants.geocoded.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+      }
+    end
+
+
   end
 
   def show
+    @restaurants = Restaurant.all
+
     @restaurant = Restaurant.find(params[:id])
     @meals = Meal.all
     @meal = @meals.map { |meal| meal.restaurant_id = @restaurant.id }
+
+    @markers = @restaurants.geocoded.map do |restaurant|
+      {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { restaurant: restaurant })
+      }
+    end
   end
+
 
   def new
     @restaurant = Restaurant.new
@@ -39,6 +59,15 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :photo, :description, :address, :category, :user_id)
+    params.require(:restaurant).permit(
+      :name,
+      :photo,
+      :description,
+      :address,
+      :latitude,
+      :longitude,
+      :category,
+      :user_id,
+      )
   end
 end
