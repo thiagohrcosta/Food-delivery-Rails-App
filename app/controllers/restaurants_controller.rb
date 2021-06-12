@@ -6,6 +6,8 @@ class RestaurantsController < ApplicationController
 
   def show
     @restaurant = Restaurant.find(params[:id])
+    @meals = Meal.all
+    @meal = @meals.map { |meal| meal.restaurant_id = @restaurant.id }
   end
 
   def new
