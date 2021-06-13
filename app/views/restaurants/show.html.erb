@@ -18,15 +18,15 @@
       <div class="col-lg-6">
         <div class="meal-grid">
           <% @meals.each do |meal| %>
-            <% if @restaurant.id == meal.restaurant_id %>
+            <% if meal.restaurant_id == @restaurant.id %>
               <div class="row">
                 <div class="meal-card">
-                <div class="col-lg-3 img-meal"
+                <div class="col-lg-5 img-meal"
                   style="background-image: url(<%= meal.photo %>);
                   background-size: 100% 100%;
                 ">
                 </div>
-                <div class="col-lg-9">
+                <div class="col-lg-7">
                   <h3><%= meal.name %></h3>
                   <p><%= meal.description %></p>
                   <p class="meal-price">Order now for $ <%= sprintf('%.2f',meal.price) %></p>

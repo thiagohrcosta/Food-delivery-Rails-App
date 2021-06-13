@@ -1,5 +1,6 @@
 class MealsController < ApplicationController
   before_action :set_meal, only: [:show, :edit, :update, :destroy]
+  before_action :find_restaurant, only: [:new, :create]
 
   def index
     @meals = Meal.all
@@ -13,9 +14,9 @@ class MealsController < ApplicationController
 
   def create
     @meal = Meal.new(meal_params)
-    # @meal.restaurant_id = @restaurant
+    @meal.restaurant.id = @restaurant
     if @meal.save
-      redirect_to user_profile_path
+      redirect_to user_profile_path(current_user.id)
     else
       render :new
     end
@@ -45,8 +46,8 @@ class MealsController < ApplicationController
     params.require(:meal).permit(:name, :photo, :price, :description, :restaurant_id)
   end
 
-  def set_restaurant
-    @restaurant = Restaurant.find(params[:id])
+  def find_restaurant
+    @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
 end

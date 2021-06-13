@@ -7,7 +7,7 @@
 
       </div>
       <div class="col-lg-6 meal-right-bg mt-5">
-        <%= simple_form_for (meal) do |f| %>
+        <%= simple_form_for [@restaurant, @meal] do |f| %>
           <%= f.input :name %>
           <%= f.input :photo %>
           <%= f.input :description %>
