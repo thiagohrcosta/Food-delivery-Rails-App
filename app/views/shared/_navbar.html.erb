@@ -20,7 +20,7 @@
                 <% if user_signed_in? %>
                   <%= link_to "Dashboard", user_profile_path(current_user.id), class: "btn btn-custom-login btn-outline-primary" %>
                 <% else %>
-                  <%= link_to "Login",  "#", class: "btn btn-custom-login btn-outline-primary" %>
+                  <%= link_to "Login",  user_session_path, class: "btn btn-custom-login btn-outline-primary" %>
                 <% end %>
               </li>
             </ul>

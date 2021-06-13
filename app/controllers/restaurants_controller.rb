@@ -18,7 +18,6 @@ class RestaurantsController < ApplicationController
 
     @restaurant = Restaurant.find(params[:id])
     @meals = Meal.all
-    @meal = @meals.map { |meal| meal.restaurant_id = @restaurant.id }
 
     @markers = @restaurants.geocoded.map do |restaurant|
       {

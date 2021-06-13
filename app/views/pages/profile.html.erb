@@ -22,7 +22,7 @@
         <img class="profile-restaurant-photo" src="<%= restaurant.photo %>" alt="">
         <%= link_to "edit", edit_restaurant_path(restaurant.id), class: "btn btn-edit-restaurant" %>
         <%= link_to "Delete", edit_restaurant_path(restaurant.id), class: "btn btn-delete-restaurant" %>
-        <%= link_to "Add Meal", new_meal_path, class: "btn btn-add-meal" %>
+        <%= link_to "Add Meal", new_restaurant_meal_path(restaurant.id), class: "btn btn-add-meal" %>
       </div>
       <div class="">
         <h2><%= restaurant.name %></h2>
@@ -45,7 +45,7 @@
                     <p><%= meal.price %></p>
                   </div>
                   <div class="col-lg-3">
-                    <%= link_to "Edit meal", edit_meal_path, class: "btn btn-info" %>
+                    <%= link_to "Edit meal", edit_restaurant_meal_path(restaurant.id), class: "btn btn-info" %>
                   </div>
                 </div>
               </div>
