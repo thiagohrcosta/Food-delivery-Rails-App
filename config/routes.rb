@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :meals
   end
 
+  resources :orders
+
   get "/profile/:id", to: "pages#profile", as: :user_profile
 
 end

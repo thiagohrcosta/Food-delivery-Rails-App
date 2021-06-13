@@ -29,7 +29,10 @@
                 <div class="col-lg-7">
                   <h3><%= meal.name %></h3>
                   <p><%= meal.description %></p>
-                  <p class="meal-price">Order now for $ <%= sprintf('%.2f',meal.price) %></p>
+                  <p class="meal-price">
+                    <%price = meal.price %>
+                    <%= link_to "Order Now #{price}", new_order_path(meal.id) %>
+                  </p>
                 </div>
                 </div>
               </div>
