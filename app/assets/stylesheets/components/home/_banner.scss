@@ -1,6 +1,6 @@
 .banner{
-  background-image:  linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("https://res.cloudinary.com/dloadb2bx/image/upload/v1623530934/photo-1455619452474-d2be8b1e70cd_zraoo0.jpg");
-  height: 90vh;
+  background-image:  linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url("https://res.cloudinary.com/dloadb2bx/image/upload/v1623615555/photo-1589906493606-a6ca2a06078b_kfvzxn.jpg");
+  height: 100vh;
   background-size: 100% 100%;
 }
 
@@ -9,4 +9,36 @@
   width: 70%;
   color: #fff;
   margin-top: 10%;
+}
+
+.banner-container{
+  color: #FFE66D;
+  text-align: center;
+  margin-top: 200px;
+
+  h1{
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+}
+
+.search-bar{
+  width: 60%;
+  margin: 0 auto;
+  background-color: #FFE66D;
+  padding: 20px;
+  display: flex;
+
+  .input-search{
+    width: 75%;
+  }
+
+  .input-btn{
+    margin-left: 10px;
+    padding: 5px 35px;
+    border: 1px solid #020100;
+    color: #020100;
+  }
 }
